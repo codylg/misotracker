@@ -1,0 +1,40 @@
+block variables
+  - var title = "Dedicated Trackers for Magic: The Gathering"
+  - var appTitle = "Miso Tracker"
+  - var description = "A collection of different trackers built specifically for various decks."
+  - var slug = ""
+  - var card = "TODO"
+  - var frontPage = true
+
+doctype html
+html(lang="en")
+
+  head
+
+    title #{title}
+    meta(name="description", content="#{description}")
+    meta(name="theme-color", content="#26282e")
+    meta(charset="utf-8")
+    meta(name="author", content="Cody Lindsay Gordon")
+
+    block viewport
+      meta(name="viewport", content="initial-scale=1")
+
+    meta(property="og:title", content="#{title}")
+    meta(property="og:site_name", content="Miso Tracker")
+    meta(property="og:description", content="#{description}")
+    meta(property="og:type", content="website")
+    meta(property="og:url", content="https://misotracker.com/#{slug}")
+    meta(property="og:image", content="https://misotracker.com/#{card}")
+
+    link(rel="icon", href="/favicon.svg")
+    link(rel="stylesheet", href="/styles.css", async)
+    meta(name="apple-mobile-web-app-status-bar-style", content="black-translucent")
+    meta(name="apple-mobile-web-app-capable", content="yes")
+    meta(name="apple-mobile-web-app-title", content="#{appTitle}")
+
+    block headExtra
+
+  body
+
+    block content
