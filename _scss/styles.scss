@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;800&display=swap');
 
-$font: "Space Mono", monospace;
+$font-mono: "Space Mono", monospace;
+$font: -apple-system, BlinkMacSystemFont, Inter, system-ui, sans-serif;
 $mana-black-bg: #B3A7C8;
 $mana-black-fg: #1A132A;
 $mana-colourless-bg: #C9C2BF;
@@ -18,7 +20,7 @@ body {
   width: 100vw;
   max-width: 100%;
   margin: 0;
-  font-family: $font;
+  font-family: $font-mono;
   font-weight: 400;
   font-size: 1.6rem;
   line-height: 1.33em;
@@ -35,12 +37,9 @@ body {
 
 h1,
 h2,
-h3,
-h4,
-h5,
-h6 {
+h3 {
   margin: 1em 0;
-  font-family: $font;
+  font-family: $font-mono;
   font-weight: 800;
   line-height: 1.2em;
 }
@@ -57,17 +56,9 @@ h3 {
   font-size: 2rem;
 }
 
-h4 {
-  font-size: 1.8rem;
-}
-
-h5 {
-  font-size: 1.6rem;
-}
-
 p {
   margin: 1.5em 0;
-  font-family: $font;
+  font-family: $font-mono;
   font-size: 1.4rem;
   line-height: 1.5em;
 
@@ -98,6 +89,12 @@ a {
 .home {
   max-width: 640px;
   padding: 0 3rem;
+
+  h1,
+  h2,
+  p {
+    font-family: $font;
+  }
 }
 
 .mtg-counter {
@@ -148,7 +145,7 @@ a {
       padding: 8px;
       border: 0;
       background-color: transparent;
-      font-family: $font;
+      font-family: $font-mono;
       font-size: 12px;
       color: rgb(190, 192, 205);
       text-size-adjust: none;
@@ -216,7 +213,7 @@ a {
       position: absolute;
       top: 12px;
       margin: 0;
-      font-family: $font;
+      font-family: $font-mono;
       font-weight: 400;
       font-size: 13px;
       color: rgb(130, 135, 145);
@@ -251,7 +248,7 @@ a {
       margin: 0;
       border: 0;
       background-color: transparent;
-      font-family: $font;
+      font-family: $font-mono;
       font-size: 40px;
       font-weight: 400;
       text-align: center;
@@ -307,7 +304,7 @@ a {
       padding: 20px;
       border: 0;
       background-color: transparent;
-      font-family: $font;
+      font-family: $font-mono;
       font-size: 20px;
       color: rgb(68, 70, 76);
       transition: all 0.2s ease-in-out;
