@@ -22,7 +22,7 @@ body {
   font-weight: 400;
   font-size: 1.6rem;
   line-height: 1.33em;
-  color: rgb(130, 135, 145);
+  color: rgb(200, 205, 215);
   background-color: #000000;
   -webkit-tap-highlight-color: transparent;
 }
@@ -213,6 +213,7 @@ a {
       font-family: $font;
       font-weight: 400;
       font-size: 13px;
+      color: rgb(130, 135, 145);
       user-select: none;
       -webkit-touch-callout: none;
 

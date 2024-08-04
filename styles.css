@@ -11,7 +11,7 @@ body {
   font-weight: 400;
   font-size: 1.6rem;
   line-height: 1.33em;
-  color: #828791;
+  color: #c8cdd7;
   background-color: #000000;
   -webkit-tap-highlight-color: transparent;
 }
@@ -203,6 +203,7 @@ a {
   font-family: "Space Mono", monospace;
   font-weight: 400;
   font-size: 13px;
+  color: #828791;
   user-select: none;
   -webkit-touch-callout: none;
 }
