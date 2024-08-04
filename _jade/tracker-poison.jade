@@ -1,0 +1,65 @@
+extends layout
+
+block append variables
+  - var title = "Poison Storm Tracker for Magic: The Gathering"
+  - var appTitle = "Poison Storm"
+  - var description = "A custom tracker to assist tracking information when playing Poison Storm"
+  - var slug = "poison"
+  - var card = "poison/card-tracker-poison.png"
+  - var frontPage = false
+  - var fullScreenPage = true
+
+block headExtra
+  link(rel="apple-touch-icon", href="/altar-lifeless/icon-tracker-poison.png")
+
+block viewport
+  meta(name="viewport", content="width=device-width, initial-scale=1, viewport-fit=cover")
+
+block content
+
+  body.tracker
+    div.mtg-counter(ontouchstart="")
+      div.counter-group.control-group
+        div.card
+          button#new-game(onpointerdown="newGame()") New Game
+        div.card
+          button(onpointerdown="emptyManaPool()") Empty Mana Pool
+      div.counter-group
+        div.counter.card#player
+          h1 Self
+          input#number1.life(type="number", inputmode="numeric", value="20", placeholder="🧙")
+          button.increase(onpointerdown="increaseNumber(1)", onpointerup="buttonRelease()") +
+          button.decrease(onpointerdown="decreaseNumber(1)", onpointerup="buttonRelease()") −
+        div.counter.card#poison
+          h1 Poison
+          input#number2.empty(type="number", inputmode="numeric", value="0", placeholder="🧙")
+          button.increase(onpointerdown="increaseNumber(2)", onpointerup="buttonRelease()") +
+          button.decrease(onpointerdown="decreaseNumber(2)", onpointerup="buttonRelease()") −
+        div.counter.card#storm
+          h1 Storm
+          input#number3.empty(type="number", inputmode="numeric", value="0", placeholder="🧙")
+          button.increase(onpointerdown="increaseNumber(3)", onpointerup="buttonRelease()") +
+          button.reset(onpointerdown="resetNumber(3)", onpointerup="buttonRelease()") ↺
+      div.counter-group#mana-pool
+        div.counter.card.mana-count#colourless
+          img.mana-symbol(src="/C.png" alt="Colourless mana symbol")
+          input#number4.empty(type="number", inputmode="numeric", value="0", placeholder="🧙")
+          button.increase(onpointerdown="increaseNumber(4)", onpointerup="buttonRelease()") +
+          button.decrease(onpointerdown="decreaseNumber(4)", onpointerup="buttonRelease()") −
+        div.counter.card.mana-count#blue
+          img.mana-symbol(src="/U.png" alt="Blue mana symbol")
+          input#number5.empty(type="number", inputmode="numeric", value="0", placeholder="🧙")
+          button.increase(onpointerdown="increaseNumber(5)", onpointerup="buttonRelease()") +
+          button.decrease(onpointerdown="decreaseNumber(5)", onpointerup="buttonRelease()") −
+        div.counter.card.mana-count#black
+          img.mana-symbol(src="/B.png" alt="Black mana symbol")
+          input#number6.empty(type="number", inputmode="numeric", value="0", placeholder="🧙")
+          button.increase(onpointerdown="increaseNumber(6)", onpointerup="buttonRelease()") +
+          button.decrease(onpointerdown="decreaseNumber(6)", onpointerup="buttonRelease()") −
+        div.counter.card.mana-count#green
+          img.mana-symbol(src="/G.png" alt="Green mana symbol")
+          input#number7.empty(type="number", inputmode="numeric", value="0", placeholder="🧙")
+          button.increase(onpointerdown="increaseNumber(7)", onpointerup="buttonRelease()") +
+          button.decrease(onpointerdown="decreaseNumber(7)", onpointerup="buttonRelease()") −
+
+    script(type="text/javascript", src="/tracker.js")

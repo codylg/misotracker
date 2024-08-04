@@ -3,6 +3,8 @@
 
 $font-mono: "Space Mono", monospace;
 $font: -apple-system, BlinkMacSystemFont, Inter, system-ui, sans-serif;
+$mana-blue-bg: #AAE0FA;
+$mana-blue-fg: #081922;
 $mana-black-bg: #B3A7C8;
 $mana-black-fg: #1A132A;
 $mana-colourless-bg: #C9C2BF;
@@ -338,6 +340,14 @@ a {
       }
     }
 
+    &#poison input {
+      color: #b8d24d;
+
+      &:not(.empty) {
+        filter: drop-shadow(0 0 12px #b8d24d);
+      }
+    }
+
     &#colourless {
 
       input {
@@ -364,6 +374,21 @@ a {
 
         input {
           color: $mana-black-fg;
+        }
+      }
+    }
+
+    &#blue {
+
+      input {
+        color: $mana-blue-bg;
+      }
+
+      &.active {
+        background-color: $mana-blue-bg;
+
+        input {
+          color: $mana-blue-fg;
         }
       }
     }

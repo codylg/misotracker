@@ -332,6 +332,14 @@ a {
   filter: drop-shadow(0 0 12px #FFC544);
 }
 
+.mtg-counter .counter#poison input {
+  color: #b8d24d;
+}
+
+.mtg-counter .counter#poison input:not(.empty) {
+  filter: drop-shadow(0 0 12px #b8d24d);
+}
+
 .mtg-counter .counter#colourless input {
   color: #C9C2BF;
 }
@@ -354,6 +362,18 @@ a {
 
 .mtg-counter .counter#black.active input {
   color: #1A132A;
+}
+
+.mtg-counter .counter#blue input {
+  color: #AAE0FA;
+}
+
+.mtg-counter .counter#blue.active {
+  background-color: #AAE0FA;
+}
+
+.mtg-counter .counter#blue.active input {
+  color: #081922;
 }
 
 .mtg-counter .counter#red input {
