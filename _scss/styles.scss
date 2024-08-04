@@ -29,6 +29,7 @@ body {
   &.tracker {
     overflow-x: hidden;
     overflow-y: hidden;
+    touch-action: none;
   }
 }
 
