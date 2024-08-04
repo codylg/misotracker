@@ -413,12 +413,12 @@ a {
 }
 
 .mtg-counter .counter#prowess input {
-  color: #1C0201;
+  color: #F5C1AC;
   pointer-events: none;
 }
 
 .mtg-counter .counter#prowess input:not(.empty) {
-  filter: drop-shadow(0 0 12px #1C0201);
+  filter: drop-shadow(0 0 12px #F5C1AC);
 }
 
 .mtg-counter #kiln-counts input {
