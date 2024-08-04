@@ -17,35 +17,36 @@ block viewport
 
 block content
 
-  div.mtg-counter(ontouchstart="")
-    div.counter-group.control-group
-      div.card
-        button#new-game(onpointerdown="newGame()") New Game
-    div.counter-group
-      div.counter.card#opponent
-        h1 Opponent
-        input#number1.life(type="number", inputmode="numeric", value="20", placeholder="🧙")
-        button.increase(onpointerdown="increaseNumber(1)") +
-        button.decrease(onpointerdown="decreaseNumber(1)") −
-      div.counter.card#player
-        h1 Self
-        input#number2.life(type="number", inputmode="numeric", value="20", placeholder="🧙")
-        button.increase(onpointerdown="increaseNumber(2)") +
-        button.decrease(onpointerdown="decreaseNumber(2)") −
-      div.counter.card#prowess
-        h1 Prowess
-        input#prowess-counter.empty(type="number", value="0", readonly)
-        button.increase(onpointerdown="increaseProwess()") +
-        button.reset(onpointerdown="resetProwess()") ↺
-    div.counter-group#kiln-counts
-      div.counter.card
-        h1 Swiftspear
-        input#swiftspear-counter.empty(type="text", value="+0/+0" readonly)
-      div.counter.card
-        h1 Crasher
-        input#crasher-counter.empty(type="text", value="+0/+0" readonly)
-      div.counter.card
-        h1 Kiln Fiend
-        input#kiln-counter.empty(type="text", value="+0/+0" readonly)
+  body.tracker
+    div.mtg-counter(ontouchstart="")
+      div.counter-group.control-group
+        div.card
+          button#new-game(onpointerdown="newGame()") New Game
+      div.counter-group
+        div.counter.card#opponent
+          h1 Opponent
+          input#number1.life(type="number", inputmode="numeric", value="20", placeholder="🧙")
+          button.increase(onpointerdown="increaseNumber(1)") +
+          button.decrease(onpointerdown="decreaseNumber(1)") −
+        div.counter.card#player
+          h1 Self
+          input#number2.life(type="number", inputmode="numeric", value="20", placeholder="🧙")
+          button.increase(onpointerdown="increaseNumber(2)") +
+          button.decrease(onpointerdown="decreaseNumber(2)") −
+        div.counter.card#prowess
+          h1 Prowess
+          input#prowess-counter.empty(type="number", value="0", readonly)
+          button.increase(onpointerdown="increaseProwess()") +
+          button.reset(onpointerdown="resetProwess()") ↺
+      div.counter-group#kiln-counts
+        div.counter.card
+          h1 Swiftspear
+          input#swiftspear-counter.empty(type="text", value="+0/+0" readonly)
+        div.counter.card
+          h1 Crasher
+          input#crasher-counter.empty(type="text", value="+0/+0" readonly)
+        div.counter.card
+          h1 Kiln Fiend
+          input#kiln-counter.empty(type="text", value="+0/+0" readonly)
 
-  script(type="text/javascript", src="/tracker.js")
+    script(type="text/javascript", src="/tracker.js")

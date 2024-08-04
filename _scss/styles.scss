@@ -25,6 +25,11 @@ body {
   color: rgb(200, 205, 215);
   background-color: #000000;
   -webkit-tap-highlight-color: transparent;
+
+  &.tracker {
+    overflow-x: hidden;
+    overflow-y: hidden;
+  }
 }
 
 h1,
