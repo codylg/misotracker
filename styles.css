@@ -17,6 +17,11 @@ body {
   -webkit-tap-highlight-color: transparent;
 }
 
+body:not(.tracker) {
+  background-color: #23211F;
+  background-image: url('data:image/svg+xml;utf8,<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="1" height="1" fill="%23635F5C"/></svg>');
+}
+
 body.tracker {
   overflow-x: hidden;
   overflow-y: hidden;
@@ -73,6 +78,15 @@ a:visited:active {
 
 a {
   color: inherit;
+}
+
+hr {
+  position: relative;
+  left: -2rem;
+  width: calc(100% + 4rem);
+  margin: 3rem 0;
+  border: 0;
+  border-bottom: 1px solid #b9b0aa;
 }
 
 .home {
