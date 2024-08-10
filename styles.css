@@ -76,8 +76,15 @@ a {
 }
 
 .home {
-  max-width: 640px;
+  max-width: 500px;
   padding: 0 3rem;
+  margin: 0 auto;
+}
+
+@media (max-width: 380px) {
+  .home {
+    padding: 0 1.5rem;
+  }
 }
 
 .home h1,
