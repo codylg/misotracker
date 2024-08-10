@@ -1,0 +1,50 @@
+extends layout
+
+block append variables
+  - var title = "Cycle Storm Tracker for Magic: The Gathering"
+  - var appTitle = "Cycle Storm"
+  - var description = "A custom tracker to assist tracking information when playing Cycle Storm"
+  - var slug = "cycle"
+  - var card = "cycle/card-tracker-cycle.png"
+  - var frontPage = false
+  - var fullScreenPage = true
+
+block headExtra
+  link(rel="apple-touch-icon", href="/cycle/icon-tracker-cycle.png")
+
+block viewport
+  meta(name="viewport", content="width=device-width, initial-scale=1, viewport-fit=cover")
+
+block content
+
+  body.tracker
+    div.mtg-counter(ontouchstart="")
+      div.counter-group.control-group
+        div.card
+          button#new-game(onpointerdown="newGame()") New Game
+        div.card
+          button(onpointerdown="emptyManaPool()") Empty Mana Pool
+      div.counter-group
+        div.counter.card#opponent
+          h1 Opponent
+          input#number1.life(type="number", inputmode="numeric", value="20", placeholder="🧙")
+          button.increase(onpointerdown="increaseNumber(1)", onpointerup="buttonRelease()") +
+          button.decrease(onpointerdown="decreaseNumber(1)", onpointerup="buttonRelease()") −
+        div.counter.card#player
+          h1 Self
+          input#number2.life(type="number", inputmode="numeric", value="20", placeholder="🧙")
+          button.increase(onpointerdown="increaseNumber(2)", onpointerup="buttonRelease()") +
+          button.decrease(onpointerdown="decreaseNumber(2)", onpointerup="buttonRelease()") −
+      div.counter-group#mana-pool
+        div.counter.card#storm
+          h1 Storm
+          input#number3.empty(type="number", inputmode="numeric", value="0", placeholder="🧙")
+          button.increase(onpointerdown="increaseNumber(3)", onpointerup="buttonRelease()") +
+          button.reset(onpointerdown="resetNumber(3)", onpointerup="buttonRelease()") ↺
+        div.counter.card.mana-count#black
+          img.mana-symbol(src="/B.png" alt="Black mana symbol")
+          input#number4.empty(type="number", inputmode="numeric", value="0", placeholder="🧙")
+          button.increase(onpointerdown="increaseNumber(4)", onpointerup="buttonRelease()") +
+          button.decrease(onpointerdown="decreaseNumber(4)", onpointerup="buttonRelease()") −
+
+    script(type="text/javascript", src="/tracker.js")
