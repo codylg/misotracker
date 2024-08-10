@@ -1,2 +1,2 @@
 # misotracker
-Dedicated trackers for Magic: The Gathering at [https://misotracker.com](misotracker.com)
+Dedicated trackers for Magic: The Gathering at [misotracker.com](https://misotracker.com)
