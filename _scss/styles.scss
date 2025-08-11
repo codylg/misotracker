@@ -473,3 +473,62 @@ hr {
     -webkit-touch-callout: none;
   }
 }
+
+.survey {
+
+  .survey-wrapper {
+    width: 100vw;
+    height: 100vh;
+    padding: 16px;
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .faces {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 40px;
+
+    input {
+      position: absolute;
+      width: 72px;
+      height: 72px;
+      opacity: 0;
+
+      &:checked + svg {
+
+        &.sad path {
+          fill: #CE4334;
+        }
+
+        &.happy path {
+          fill: #259B2B;
+        }
+      }
+    }
+
+    svg path {
+      transition: all 0.333s;
+    }
+  }
+
+  h1 {
+    font-family: "Bodoni MT", "Bodoni 72", Bodoni, serif;
+    font-size: 32px;
+    color: #f1f1f1;
+    text-align: center;
+  }
+
+  p {
+    margin-top: 40px;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    color: #A48950;
+    text-align: center;
+  }
+}
