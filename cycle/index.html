@@ -43,18 +43,39 @@
           <button onpointerdown="increaseNumber(2)" onpointerup="buttonRelease()" class="increase">+</button>
           <button onpointerdown="decreaseNumber(2)" onpointerup="buttonRelease()" class="decrease">−</button>
         </div>
-      </div>
-      <div id="mana-pool" class="counter-group">
         <div id="storm" class="counter card">
           <h1>Storm</h1>
           <input id="number3" type="number" inputmode="numeric" value="0" placeholder="🧙" class="empty">
           <button onpointerdown="increaseNumber(3)" onpointerup="buttonRelease()" class="increase">+</button>
           <button onpointerdown="resetNumber(3)" onpointerup="buttonRelease()" class="reset">↺</button>
         </div>
-        <div id="black" class="counter card mana-count"><img src="/B.png" alt="Black mana symbol" class="mana-symbol">
+        <div id="discard" class="counter card">
+          <h1>Discards</h1>
           <input id="number4" type="number" inputmode="numeric" value="0" placeholder="🧙" class="empty">
           <button onpointerdown="increaseNumber(4)" onpointerup="buttonRelease()" class="increase">+</button>
-          <button onpointerdown="decreaseNumber(4)" onpointerup="buttonRelease()" class="decrease">−</button>
+          <button onpointerdown="resetNumber(4)" onpointerup="buttonRelease()" class="reset">↺</button>
+        </div>
+      </div>
+      <div id="mana-pool" class="counter-group">
+        <div id="white" class="counter card mana-count"><img src="/W.png" alt="White mana symbol" class="mana-symbol">
+          <input id="number5" type="number" inputmode="numeric" value="0" placeholder="🧙" class="empty">
+          <button onpointerdown="increaseNumber(5)" onpointerup="buttonRelease()" class="increase">+</button>
+          <button onpointerdown="decreaseNumber(5)" onpointerup="buttonRelease()" class="decrease">−</button>
+        </div>
+        <div id="blue" class="counter card mana-count"><img src="/U.png" alt="Blue mana symbol" class="mana-symbol">
+          <input id="number6" type="number" inputmode="numeric" value="0" placeholder="🧙" class="empty">
+          <button onpointerdown="increaseNumber(6)" onpointerup="buttonRelease()" class="increase">+</button>
+          <button onpointerdown="decreaseNumber(6)" onpointerup="buttonRelease()" class="decrease">−</button>
+        </div>
+        <div id="black" class="counter card mana-count"><img src="/B.png" alt="Black mana symbol" class="mana-symbol">
+          <input id="number7" type="number" inputmode="numeric" value="0" placeholder="🧙" class="empty">
+          <button onpointerdown="increaseNumber(7)" onpointerup="buttonRelease()" class="increase">+</button>
+          <button onpointerdown="decreaseNumber(7)" onpointerup="buttonRelease()" class="decrease">−</button>
+        </div>
+        <div id="red" class="counter card mana-count"><img src="/R.png" alt="Red mana symbol" class="mana-symbol">
+          <input id="number8" type="number" inputmode="numeric" value="0" placeholder="🧙" class="empty">
+          <button onpointerdown="increaseNumber(8)" onpointerup="buttonRelease()" class="increase">+</button>
+          <button onpointerdown="decreaseNumber(8)" onpointerup="buttonRelease()" class="decrease">−</button>
         </div>
       </div>
     </div>

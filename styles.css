@@ -373,6 +373,18 @@ hr {
   color: #221F20;
 }
 
+.mtg-counter .counter#white input {
+  color: #FFFBD5;
+}
+
+.mtg-counter .counter#white.active {
+  background-color: #FFFBD5;
+}
+
+.mtg-counter .counter#white.active input {
+  color: #211D15;
+}
+
 .mtg-counter .counter#black input {
   color: #B3A7C8;
 }

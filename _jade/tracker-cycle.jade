@@ -35,16 +35,36 @@ block content
           input#number2.life(type="number", inputmode="numeric", value="20", placeholder="🧙")
           button.increase(onpointerdown="increaseNumber(2)", onpointerup="buttonRelease()") +
           button.decrease(onpointerdown="decreaseNumber(2)", onpointerup="buttonRelease()") −
-      div.counter-group#mana-pool
         div.counter.card#storm
           h1 Storm
           input#number3.empty(type="number", inputmode="numeric", value="0", placeholder="🧙")
           button.increase(onpointerdown="increaseNumber(3)", onpointerup="buttonRelease()") +
           button.reset(onpointerdown="resetNumber(3)", onpointerup="buttonRelease()") ↺
-        div.counter.card.mana-count#black
-          img.mana-symbol(src="/B.png" alt="Black mana symbol")
+        div.counter.card#discard
+          h1 Discards
           input#number4.empty(type="number", inputmode="numeric", value="0", placeholder="🧙")
           button.increase(onpointerdown="increaseNumber(4)", onpointerup="buttonRelease()") +
-          button.decrease(onpointerdown="decreaseNumber(4)", onpointerup="buttonRelease()") −
+          button.reset(onpointerdown="resetNumber(4)", onpointerup="buttonRelease()") ↺
+      div.counter-group#mana-pool
+        div.counter.card.mana-count#white
+          img.mana-symbol(src="/W.png" alt="White mana symbol")
+          input#number5.empty(type="number", inputmode="numeric", value="0", placeholder="🧙")
+          button.increase(onpointerdown="increaseNumber(5)", onpointerup="buttonRelease()") +
+          button.decrease(onpointerdown="decreaseNumber(5)", onpointerup="buttonRelease()") −
+        div.counter.card.mana-count#blue
+          img.mana-symbol(src="/U.png" alt="Blue mana symbol")
+          input#number6.empty(type="number", inputmode="numeric", value="0", placeholder="🧙")
+          button.increase(onpointerdown="increaseNumber(6)", onpointerup="buttonRelease()") +
+          button.decrease(onpointerdown="decreaseNumber(6)", onpointerup="buttonRelease()") −
+        div.counter.card.mana-count#black
+          img.mana-symbol(src="/B.png" alt="Black mana symbol")
+          input#number7.empty(type="number", inputmode="numeric", value="0", placeholder="🧙")
+          button.increase(onpointerdown="increaseNumber(7)", onpointerup="buttonRelease()") +
+          button.decrease(onpointerdown="decreaseNumber(7)", onpointerup="buttonRelease()") −
+        div.counter.card.mana-count#red
+          img.mana-symbol(src="/R.png" alt="Red mana symbol")
+          input#number8.empty(type="number", inputmode="numeric", value="0", placeholder="🧙")
+          button.increase(onpointerdown="increaseNumber(8)", onpointerup="buttonRelease()") +
+          button.decrease(onpointerdown="decreaseNumber(8)", onpointerup="buttonRelease()") −
 
     script(type="text/javascript", src="/tracker.js")

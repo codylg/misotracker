@@ -3,6 +3,8 @@
 
 $font-mono: "Space Mono", monospace;
 $font: -apple-system, BlinkMacSystemFont, Inter, system-ui, sans-serif;
+$mana-white-bg: #FFFBD5;
+$mana-white-fg: #211D15;
 $mana-blue-bg: #AAE0FA;
 $mana-blue-fg: #081922;
 $mana-black-bg: #B3A7C8;
@@ -378,6 +380,21 @@ hr {
 
         input {
           color: $mana-colourless-fg;
+        }
+      }
+    }
+
+    &#white {
+
+      input {
+        color: $mana-white-bg;
+      }
+
+      &.active {
+        background-color: $mana-white-bg;
+
+        input {
+          color: $mana-white-fg;
         }
       }
     }
