@@ -1,44 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Trackers for Magic: The Gathering</title>
-    <meta name="description" content="A collection of different trackers built for specific Magic: The Gathering decks.">
-    <meta name="theme-color" content="#000000">
+    <title>Miso Tracker — Fully Customisable MTG Counter for iOS</title>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A carefully designed life, mana, and status counter for Magic: The Gathering. Supports 2–8 players, commander damage, custom trackers, and more.">
+    <meta name="theme-color" content="#000000">
     <meta name="author" content="Cody Lindsay Gordon">
-    <meta name="viewport" content="initial-scale=1">
-    <meta property="og:title" content="Trackers for Magic: The Gathering">
+    <meta property="og:title" content="Miso Tracker — Fully Customisable MTG Counter">
     <meta property="og:site_name" content="Miso Tracker">
-    <meta property="og:description" content="A collection of different trackers built for specific Magic: The Gathering decks.">
+    <meta property="og:description" content="A carefully designed life, mana, and status counter for Magic: The Gathering. Supports 2–8 players, commander damage, custom trackers, and more.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://misotracker.com/">
-    <meta property="og:image" content="https://misotracker.com/altar/card-tracker-altar.png">
     <link rel="icon" href="/favicon.svg">
-    <link rel="stylesheet" href="/styles.css" async>
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-title" content="Miso Tracker">
+    <link rel="stylesheet" href="/landing.css">
   </head>
   <body>
-    <div class="home">
-      <h1>Miso Tracker 😼</h1>
-      <p>A collection of different trackers built for specific Magic: The Gathering decks. Made by <a href="https://clg.name">Cody&nbsp;G</a> — I also make <a href="https://misotoken.com">tokens</a>.</p>
-      <hr>
-      <h2>Trackers</h2>
-      <p><a href="/altar">Altar Tron</a></p>
-      <p><a href="/altar-lifeless">Altar Tron (excluding life counters)</a></p>
-      <p><a href="/poison">Poison Storm</a></p>
-      <p><a href="/cycle">Cycle Storm</a></p>
-      <p><a href="/kiln">Kiln Fiend (RIP)</a></p>
-      <hr>
-      <h2>Memes</h2>
-      <p><a href="/survey">Post-Game Survey</a></p>
-      <hr>
-      <h2>Installing on your phone</h2>
-      <p>You can install a tracker on your phone as a web app. On iOS tap the Share icon > Add to Home Screen. On Android tap the More icon > Add to home screen > Install.</p>
-      <hr>
-      <h2>Open source on Github</h2>
-      <p>You can find the repo <a href="https://github.com/codylg/misotracker">here</a>.</p>
-    </div>
+    <main>
+      <header class="hero">
+        <img src="/static/appicon.png" alt="Miso Tracker" class="app-icon">
+        <h1>Miso Tracker</h1>
+        <p class="subtitle">Fully customisable MTG counter</p>
+        <a href="https://apps.apple.com/au/app/mtg-life-counter-miso-tracker/id6759641556" class="app-store-badge">
+          <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store">
+        </a>
+      </header>
+      <div class="phones-wrapper">
+        <div class="phones">
+          <div class="phone">
+            <div class="phone-frame">
+              <video autoplay muted loop playsinline>
+                <source src="/static/shared-demo.mp4" type="video/mp4">
+                <source src="/static/shared-demo.mov" type="video/quicktime">
+              </video>
+            </div>
+          </div>
+          <div class="phone">
+            <div class="phone-frame">
+              <video autoplay muted loop playsinline>
+                <source src="/static/custom-demo.mp4" type="video/mp4">
+                <source src="/static/custom-demo.mov" type="video/quicktime">
+              </video>
+            </div>
+          </div>
+        </div>
+        <div class="labels-overlay">
+          <div class="phone-label phone-label-shared">
+            <svg class="phone-label-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 12.75c1.63 0 3.07.39 4.24.9 1.08.48 1.76 1.56 1.76 2.73V18H6v-1.61c0-1.18.68-2.26 1.76-2.73 1.17-.52 2.61-.91 4.24-.91zM4 13c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm1.13 1.1c-.37-.06-.74-.1-1.13-.1-.99 0-1.93.21-2.78.58A2.01 2.01 0 0 0 0 16.43V18h4.5v-1.61c0-.83.23-1.61.63-2.29zM20 13c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm4 3.43c0-.81-.48-1.53-1.22-1.85A6.95 6.95 0 0 0 20 14c-.39 0-.76.04-1.13.1.4.68.63 1.46.63 2.29V18H24v-1.57zM12 6c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3z"/></svg>
+            <strong>Shared tracker</strong>
+            <span>2–8 player life and status tracker</span>
+          </div>
+          <div class="phone-label phone-label-custom">
+            <svg class="phone-label-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04a1 1 0 0 0 0-1.41l-2.34-2.34a1 1 0 0 0-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"/></svg>
+            <strong>Custom trackers</strong>
+            <span>Single player drag-and-drop builder</span>
+          </div>
+        </div>
+      </div>
+    </main>
   </body>
 </html>

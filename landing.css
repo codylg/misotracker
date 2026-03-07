@@ -1,0 +1,296 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  min-height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(80% 45% at 50% 100%, rgba(200, 110, 30, 0.65), rgba(150, 60, 15, 0.4) 60%, transparent 100%) no-repeat fixed, #000;
+  color: #fff;
+  perspective: 1000px;
+  overflow-x: hidden;
+}
+
+main {
+  text-align: center;
+  transform-style: preserve-3d;
+  padding: 80px 0 120px;
+}
+
+/* Hero — app icon + title */
+.hero {
+  margin-bottom: 20px;
+}
+
+.app-icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 18px;
+}
+
+.hero h1 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-top: 12px;
+}
+
+.subtitle {
+  color: #999;
+  font-size: 1rem;
+  margin-top: 6px;
+}
+
+.app-store-badge {
+  display: inline-block;
+  margin-top: 16px;
+}
+
+.app-store-badge img {
+  height: 44px;
+}
+
+/* Phones wrapper — positioning context for labels */
+.phones-wrapper {
+  position: relative;
+  display: inline-block;
+  perspective: 1000px;
+}
+
+/* Phone layout — table perspective */
+.phones {
+  display: flex;
+  gap: 50px;
+  transform: rotateX(20deg) rotateZ(0deg) translateY(40px);
+  transform-style: preserve-3d;
+}
+
+.phone {
+  position: relative;
+  transform-style: preserve-3d;
+}
+
+.phone:first-child {
+  transform: rotateZ(-3deg) rotateY(8deg);
+}
+
+.phone:last-child {
+  margin-top: 60px;
+  transform: rotateZ(3deg) rotateY(-8deg);
+}
+
+/* Labels overlay — flat layer on top of 3D scene */
+.labels-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.labels-overlay > * {
+  pointer-events: auto;
+}
+
+/* Floating circle labels */
+.phone-label {
+  position: absolute;
+  z-index: 10;
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px) brightness(1.1);
+  -webkit-backdrop-filter: blur(20px) brightness(1.1);
+  filter: brightness(1.15);
+  border: none;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.15),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.03),
+    inset 1px 0 0 rgba(255, 255, 255, 0.08),
+    inset -1px 0 0 rgba(255, 255, 255, 0.08),
+    0 20px 40px rgba(0, 0, 0, 0.4);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  text-align: center;
+  padding: 14px;
+}
+
+.phone-label-shared {
+  top: 120px;
+  left: -120px;
+}
+
+.phone-label-custom {
+  top: 180px;
+  right: -120px;
+}
+
+.phone-label-icon {
+  width: 16px;
+  height: 16px;
+  margin-top: -12px;
+  margin-bottom: 6px;
+  opacity: 0.7;
+}
+
+.phone-label strong {
+  font-size: 0.75rem;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+.phone-label span {
+  font-size: 0.65rem;
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 1.3;
+}
+
+/* Minimal iPhone 17 Pro frame — 62pt radius on 1206×2622 = ~5.14% width */
+.phone-frame {
+  background: #0d0d0d;
+  border-radius: 16.5% / 7.6%;
+  padding: 2%;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  box-shadow:
+    0 0 0 2px #333,
+    0 0 0 4px #111,
+    0 40px 80px rgba(0, 0, 0, 0.7),
+    0 15px 30px rgba(0, 0, 0, 0.5);
+}
+
+.phone-frame video {
+  width: 240px;
+  aspect-ratio: 1206 / 2622;
+  border-radius: 15.42% / 7.09%;
+  display: block;
+  backface-visibility: hidden;
+}
+
+/* Responsive — stack phones vertically */
+@media (max-width: 840px) {
+  .phones-wrapper {
+    perspective: none;
+  }
+
+  .phones {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    transform: none;
+  }
+
+  .phone {
+    perspective: 1200px;
+  }
+
+  .phone:first-child {
+    transform: none;
+  }
+
+  .phone:last-child {
+    margin-top: 0;
+    transform: none;
+  }
+
+  .phone:first-child .phone-frame {
+    transform: rotateX(20deg) rotateY(8deg);
+  }
+
+  .phone:last-child .phone-frame {
+    transform: rotateX(20deg) rotateY(-8deg);
+  }
+
+  /* Swap label sides */
+  .phone-label-shared {
+    left: auto;
+    right: -100px;
+  }
+
+  .phone-label-custom {
+    top: auto;
+    right: auto;
+    bottom: 240px;
+    left: -100px;
+  }
+}
+
+/* Small screens — labels above phones, no perspective */
+@media (max-width: 500px) {
+  .phones {
+    gap: 60px;
+  }
+
+  .phone {
+    perspective: none;
+  }
+
+  .phone {
+    padding-top: 100px;
+  }
+
+  .phone:first-child .phone-frame,
+  .phone:last-child .phone-frame {
+    transform: none;
+  }
+
+  .phone-label {
+    width: 240px;
+    height: auto;
+    border-radius: 0;
+    background: none;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    filter: none;
+    box-shadow: none;
+    padding: 0;
+    left: 50% !important;
+    right: auto !important;
+    transform: translateX(-50%);
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    gap: 0 4px;
+  }
+
+  .phone-label-shared {
+    top: 30px;
+    left: 50% !important;
+    right: auto !important;
+  }
+
+  .phone-label-custom {
+    top: calc(50% + 60px);
+    bottom: auto;
+    left: 50% !important;
+    right: auto !important;
+  }
+
+  .phone-label strong {
+    font-size: 1rem;
+    margin-bottom: 4px;
+  }
+
+  .phone-label span {
+    font-size: 0.85rem;
+    width: 100%;
+  }
+
+  .phone-label-icon {
+    width: 18px;
+    height: 18px;
+    margin-top: 0;
+    margin-bottom: 0;
+    transform: translateY(-1px);
+  }
+}
