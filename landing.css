@@ -302,4 +302,8 @@ main {
     margin-bottom: 0;
     transform: translateY(-1px);
   }
+
+  html {
+    background: #000;
+  }
 }
