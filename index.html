@@ -3,7 +3,7 @@
   <head>
     <title>Miso Tracker — Fully Customisable MTG Counter for iOS</title>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <meta name="description" content="A carefully designed life, mana, and status counter for Magic: The Gathering. Supports 2–8 players, commander damage, custom trackers, and more.">
     <meta name="theme-color" content="#000000">
     <meta name="apple-itunes-app" content="app-id=6759641556">
@@ -61,5 +61,14 @@
         </div>
       </div>
     </main>
+    <script>
+      // iOS Safari may not autoplay videos that are offscreen on load
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) entry.target.play();
+        });
+      });
+      document.querySelectorAll('video').forEach((v) => observer.observe(v));
+    </script>
   </body>
 </html>
