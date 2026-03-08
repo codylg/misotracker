@@ -32,18 +32,12 @@
         <div class="phones">
           <div class="phone">
             <div class="phone-frame">
-              <video autoplay muted loop playsinline>
-                <source src="/static/shared-demo.mp4" type="video/mp4">
-
-              </video>
+              <video autoplay muted loop playsinline src="/static/shared-demo.mp4"></video>
             </div>
           </div>
           <div class="phone">
             <div class="phone-frame">
-              <video autoplay muted loop playsinline>
-                <source src="/static/custom-demo.mp4" type="video/mp4">
-
-              </video>
+              <video autoplay muted loop playsinline src="/static/custom-demo.mp4"></video>
             </div>
           </div>
         </div>
@@ -61,14 +55,5 @@
         </div>
       </div>
     </main>
-    <script>
-      // iOS Safari may not autoplay videos that are offscreen on load
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) entry.target.play();
-        });
-      });
-      document.querySelectorAll('video').forEach((v) => observer.observe(v));
-    </script>
   </body>
 </html>
