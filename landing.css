@@ -12,13 +12,23 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: radial-gradient(80% 45% at 50% 100%, rgba(200, 110, 30, 0.65), rgba(150, 60, 15, 0.4) 60%, transparent 100%) no-repeat fixed, #000;
+  background: #000;
   color: #fff;
   perspective: 1000px;
   overflow-x: hidden;
 }
 
+.bg-gradient {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  background: radial-gradient(80% 45% at 50% 100%, rgba(200, 110, 30, 0.65), rgba(150, 60, 15, 0.4) 60%, transparent 100%);
+  pointer-events: none;
+}
+
 main {
+  position: relative;
+  z-index: 1;
   text-align: center;
   transform-style: preserve-3d;
   padding: 80px 0 120px;
@@ -77,12 +87,12 @@ main {
 }
 
 .phone:first-child {
-  transform: rotateZ(-3deg) rotateY(8deg);
+  transform: rotateZ(-4deg) rotateY(10deg) rotateX(-2deg);
 }
 
 .phone:last-child {
   margin-top: 60px;
-  transform: rotateZ(3deg) rotateY(-8deg);
+  transform: rotateZ(4deg) rotateY(-10deg) rotateX(-2deg);
 }
 
 /* Labels overlay — flat layer on top of 3D scene */
@@ -157,9 +167,10 @@ main {
 
 /* Minimal iPhone 17 Pro frame — 62pt radius on 1206×2622 = ~5.14% width */
 .phone-frame {
-  background: #0d0d0d;
+  width: 250px;
+  background: #000;
   border-radius: 16.5% / 7.6%;
-  padding: 2%;
+  padding: 4px;
   transform: translateZ(0);
   backface-visibility: hidden;
   box-shadow:
@@ -170,7 +181,7 @@ main {
 }
 
 .phone-frame video {
-  width: 240px;
+  width: 100%;
   aspect-ratio: 1206 / 2622;
   border-radius: 15.42% / 7.09%;
   display: block;
