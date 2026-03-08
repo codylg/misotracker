@@ -7,7 +7,9 @@
 }
 
 html {
-  background: #000;
+  background: radial-gradient(80% 45% at 50% 100%, rgba(240, 125, 60, 0.6), rgba(180, 70, 25, 0.4) 60%, transparent 100%) no-repeat fixed, #000;
+  background-size: 100% 100vh;
+  background-position: bottom;
 }
 
 body {
@@ -16,16 +18,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #000;
   color: #fff;
-}
-
-.bg-gradient {
-  position: fixed;
-  inset: 0;
-  z-index: 0;
-  background: radial-gradient(80% 45% at 50% 100%, rgba(240, 125, 60, 0.6), rgba(180, 70, 25, 0.4) 60%, transparent 100%);
-  pointer-events: none;
 }
 
 main {
